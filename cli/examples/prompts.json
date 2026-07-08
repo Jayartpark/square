@@ -1,0 +1,22 @@
+[
+  {
+    "prompt": "一只在星空下仰望的猫，梦幻氛围，紫色和蓝色调",
+    "style": "anime"
+  },
+  {
+    "prompt": "未来赛博朋克城市，霓虹灯闪烁，雨夜街道",
+    "style": "digital_art"
+  },
+  {
+    "prompt": "宁静的山水画，中国传统风格，远山近水",
+    "style": "watercolor"
+  },
+  {
+    "prompt": "极简主义几何抽象图案，黑白对比",
+    "style": "minimalist"
+  },
+  {
+    "prompt": "森林中的魔法小屋，童话风格，温暖灯光",
+    "style": "illustration"
+  }
+]
