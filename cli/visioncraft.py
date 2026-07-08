@@ -20,16 +20,18 @@ from typing import Optional, List
 import base64
 
 # 添加后端路径到系统路径
-sys.path.insert(0, str(Path(__file__).parent.parent / "backend"))
+CLI_DIR = Path(__file__).parent.absolute()
+ROOT_DIR = CLI_DIR.parent
+sys.path.insert(0, str(ROOT_DIR / "backend"))
 
+BACKEND_AVAILABLE = False
 try:
-    from services.image_generator import ImageGeneratorService
-    from services.image_editor import ImageEditorService
-    from services.aesthetic_evaluator import AestheticEvaluatorService
+    from backend.services.image_generator import ImageGeneratorService
+    from backend.services.image_editor import ImageEditorService
+    from backend.services.aesthetic_evaluator import AestheticEvaluatorService
     BACKEND_AVAILABLE = True
 except ImportError:
-    BACKEND_AVAILABLE = False
-    print("⚠️  警告：后端服务未安装，将使用模拟模式运行")
+    pass  # Will use mock mode
 
 
 class Colors:
